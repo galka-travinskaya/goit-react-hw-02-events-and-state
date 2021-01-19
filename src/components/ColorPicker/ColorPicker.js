@@ -13,7 +13,6 @@ class ColorPicker extends Component {
   // без пакета classnames
   makeOptionClassName = index => {
     const optionClasses = [s.option];
-    // не работает почему-то
     if (index === this.state.activeOptionsIdx) {
       optionClasses.push(s.optionActive);
     }
