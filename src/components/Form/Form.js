@@ -32,7 +32,11 @@ class Form extends Component {
   };
 
   reset = () => {
-    this.setState({ name: '', tag: '' });
+    this.setState({
+      name: '',
+      tag: '',
+      licence: '',
+    });
   };
 
   render() {
@@ -92,7 +96,11 @@ class Form extends Component {
         </label>
 
         <label>
-          <input type="ckeckbox" name="licence" chacked={this.state.licence} />{' '}
+          <input
+            type="ckeckbox"
+            name="licence"
+            chacked={this.handleLicenceChanges}
+          />{' '}
           Согласен с условием
         </label>
         <button type="submit">Save</button>
